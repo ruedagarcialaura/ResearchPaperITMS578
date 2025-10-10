@@ -1,48 +1,47 @@
-# ResearchPaperITMS578: Comparative Study of International Cybersecurity and AI Policies
+# Comparative Study of International Cybersecurity and AI Policies
+
+## 1. Project Overview
+
+This research project aims to conduct a qualitative comparative study of the cybersecurity and AI governance frameworks of the European Union (EU) and the United States (US). Our central hypothesis is that the EU’s stricter, unified regulations lead to a more effective response to AI-driven cyber incidents compared to the fragmented US framework.
+
+To test this, we will manually identify, curate, and analyze real-world case studies of AI-driven cybersecurity incidents reported in both regions.
 
 **Team Members:**
 * Laura Rueda García
 * Felipe Susaeta Miguel
 
+---
 
-## 1. Project Overview
+## 2. Research Strategy & Methodology
 
-This research project aims to conduct a quantitative comparative study of the cybersecurity and AI governance frameworks of the European Union (EU) and the United States (US): Our core objective is to find real, documented cases of AI-driven cybersecurity incidents in the US and EU to test our central hypothesis. To achieve this, our strategy relies on two key components: precise keywords and high-quality data sources.
+Our methodology is a Qualitative Comparative Analysis based on Manually Curated Case Studies.
 
-Our **central hypothesis** is that a tangible difference exists in the volume of publicly reported cyber incidents between the two regions, influenced by their distinct regulatory environments. Our primary goal is to build a dataset of publicly reported incidents from 2020 to 2025 by systematically collecting data from various online sources. This dataset will form the basis of our statistical analysis.
+1. **Manual Curation:** Each team member is responsible for finding and documenting real-world examples of AI-driven cybersecurity incidents.
 
-## 2. Definitive Keywords (Our AI Filter)
-Our script will use the following list of keywords to identify an incident as "AI-driven". These terms focus on the specific techniques and tactics used in modern AI-related attacks.
+2. **Source Vetting:** We will prioritize reports from high-quality, technically focused sources such as major cybersecurity firm blogs (Mandiant, CrowdStrike, Unit 42), government alerts (CISA, ENISA), and reputable tech journalism.
 
-* **Specific Attack Techniques:**
-    * `deepfake`
-    * `adversarial attack`
-    * `model poisoning`
-    * `data poisoning`
-    * `model inversion`
+3. **Case Study Analysis:** For each confirmed incident, we will analyze the attack vector, the corporate and regulatory response, and the overall outcome.
 
-* **Tools & Tactics:**
-    * `ai-powered phishing`
-    * `generative ai fraud`
-    * `ai-driven malware`
+4. **Comparative Framework:** We will compare the findings from both regions against key metrics, such as response time, transparency of disclosure, and the application of fines or penalties, to evaluate the effectiveness of each regulatory framework. ESTO NO SÉ
 
-* **Broader Context:**
-    * `machine learning breach`
-    * `ai security incident`
+---
 
+## 3. Curated List of AI-Driven Incidents
 
+This table will serve as our primary dataset. Please add new findings here as they are discovered.
 
-## 3. Research Strategy & Methodology
+| Case / Incident Name | Region | Link to Report/Article | Date Found | Found By |
+| :--- | :--- | :--- | :--- | :--- |
+| *Deepfake Voice Scam* | `US` | `[Link to Forbes article]` | `2025-10-10` | `Laura` |
+| *Adversarial ML Attack* | `EU` | `[Link to ENISA report]` | `2025-10-10` | `Laura` |
+| | **US** | | | **Laura** |
+| | **US** | | | **Laura** |
+| | **EU** | | | **Felipe** |
+| | **EU** | | | **Felipe** |
+| | | | | |
 
-Our methodology is a **quantitative-first comparative analysis**. The strategy is as follows:
-
-1.  **Identify Data Sources:** We will identify and vet a list of reliable public data sources for cyber incidents. These will include government breach notification portals (US State Attorneys General sites), vulnerability databases (via APIs like the NIST NVD), and specialized cybersecurity news feeds (via RSS). 
-
-2.  **Automated Data Collection:** We will develop a Python script to automatically query, scrape, and parse these sources. The script's main function is to aggregate incident reports into a single, standardized format.
-
-3.  **Unified Dataset Generation:** The script will output a structured `incidents_database.csv` file. Each entry will contain key metadata: date, region (US/EU), source URL, and a brief description or title.
-
-4.  **Statistical Analysis:** Our primary analysis will involve comparing the frequency of reported incidents between the US and the EU over our defined time period. We will visualize this data to identify trends.
-
-
+## OTHER IMPORTANT LINKS
 https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/ai-powered-cyberattacks/
+
+
+
