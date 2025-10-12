@@ -43,15 +43,15 @@ This table will serve as our primary dataset. Please add new findings here as th
 | | | | | |
 
 ## OTHER IMPORTANT LINKS
-https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/ai-powered-cyberattacks/
+- AI-Powered Cyberattacks: https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/ai-powered-cyberattacks/
 
-https://www.cyberdefensemagazine.com/the-growing-threat-of-ai-powered-cyberattacks-in-2025/
+- The Growing Threat of AI-powered Cyberattacks in 2025: https://www.cyberdefensemagazine.com/the-growing-threat-of-ai-powered-cyberattacks-in-2025/
 
-https://mitsloan.mit.edu/ideas-made-to-matter/80-ransomware-attacks-now-use-artificial-intelligence#:~:text=New%20research%20from%20Cybersecurity%20at,as%20fake%20customer%20service%20calls
+- 80% of ransomware attacks now use artificial intelligence: https://mitsloan.mit.edu/ideas-made-to-matter/80-ransomware-attacks-now-use-artificial-intelligence#:~:text=New%20research%20from%20Cybersecurity%20at,as%20fake%20customer%20service%20calls
 
-Governor Shapiro Signs New Digital Forgery Law, Protecting Pennsylvanians from AI Scams and Financial Exploitation: https://www.pa.gov/agencies/dobs/newsroom/governor-shapiro-signs-new-digital-forgery-law--protecting-penns
+- Governor Shapiro Signs New Digital Forgery Law, Protecting Pennsylvanians from AI Scams and Financial Exploitation: https://www.pa.gov/agencies/dobs/newsroom/governor-shapiro-signs-new-digital-forgery-law--protecting-penns
 
-Artificial Intelligence Cyberattacks PAPER: https://www.uu.se/download/18.60263fe818f775e7806322da/1716301506021/c_769530-l_3-k_rapport-foi-vt20.pdf
+- Artificial Intelligence Cyberattacks PAPER: https://www.uu.se/download/18.60263fe818f775e7806322da/1716301506021/c_769530-l_3-k_rapport-foi-vt20.pdf
 
 
 
