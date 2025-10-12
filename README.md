@@ -36,7 +36,7 @@ This table will serve as our primary dataset. Please add new findings here as th
 | *Adversarial ML Attack* | `EU` | `[Link to ENISA report]` | `2025-10-10` | `Laura` |
 | | **US** | | | **Laura** |
 | | **US** | | | **Laura** |
-| | **EU** | | | **Felipe** |
+| *TaskRabbit* | `US` | `https://www.infoq.com/articles/ai-cyber-attacks/` | `2018-04` | `Felipe` |
 | | **EU** | | | **Felipe** |
 | | | | | |
 
