@@ -37,6 +37,8 @@ This table will serve as our primary dataset. Please add new findings here as th
 | | **US** | | | **Laura** |
 | | **US** | | | **Laura** |
 | *TaskRabbit* | `US` | `https://www.infoq.com/articles/ai-cyber-attacks/` | `2018-04` | `Felipe` |
+| *Unnamed UK Energy Firm* | `EU` | `https://news.sophos.com/en-us/2019/09/05/scammers-deepfake-ceos-voice-to-talk-underling-into-243000-transfer/#:~:text=Well%2C%20welcome%20to%20a%20hybrid,USD%20%24243%2C000` | `2019-03` | `Felipe` |
+| *WPP* | `EU` | `https://www.theguardian.com/technology/2024/may/24/ai-deepfake-scam-wpp-ad-agency-mark-read` | `2024-04` | `Felipe` |
 | | **EU** | | | **Felipe** |
 | | | | | |
 
