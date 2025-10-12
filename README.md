@@ -34,7 +34,7 @@ This table will serve as our primary dataset. Please add new findings here as th
 | :--- | :--- | :--- | :--- | :--- |
 | *The Attack on Colonial Pipeline* | `US` | `https://insurica.com/blog/colonial-pipeline-ransomware-attack/` | `2021` | `Laura` |
 | *Son's voice was spoofed by artificial intelligence.* | `EU` | `https://www.c-span.org/video/?c5093651/story-attempted-scam-ai` | `2025-05` | `Laura` |
-|*Fraudsters impersonated WPP’s CEO using a fake WhatsApp account, a voice clone and YouTube footage used in a virtual meet*| `US` |`https://www.theguardian.com/technology/article/2024/may/10/ceo-wpp-deepfake-scam` | | `Laura` |
+|*Fraudsters impersonated WPP’s CEO using a fake WhatsApp account, a voice clone and YouTube footage used in a virtual meet*| `EU` |`https://www.theguardian.com/technology/article/2024/may/10/ceo-wpp-deepfake-scam` | | `Laura` |
 | | **US** | | | **Laura** |
 | *TaskRabbit* | `US` | `https://www.infoq.com/articles/ai-cyber-attacks/` | `2018-04` | `Felipe` |
 | *Unnamed UK Energy Firm* | `EU` | `https://news.sophos.com/en-us/2019/09/05/scammers-deepfake-ceos-voice-to-talk-underling-into-243000-transfer/#:~:text=Well%2C%20welcome%20to%20a%20hybrid,USD%20%24243%2C000` | `2019-03` | `Felipe` |
@@ -48,6 +48,12 @@ https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/ai-powered-cybe
 https://www.cyberdefensemagazine.com/the-growing-threat-of-ai-powered-cyberattacks-in-2025/
 
 https://mitsloan.mit.edu/ideas-made-to-matter/80-ransomware-attacks-now-use-artificial-intelligence#:~:text=New%20research%20from%20Cybersecurity%20at,as%20fake%20customer%20service%20calls
+
+Governor Shapiro Signs New Digital Forgery Law, Protecting Pennsylvanians from AI Scams and Financial Exploitation: https://www.pa.gov/agencies/dobs/newsroom/governor-shapiro-signs-new-digital-forgery-law--protecting-penns
+
+Artificial Intelligence Cyberattacks PAPER: https://www.uu.se/download/18.60263fe818f775e7806322da/1716301506021/c_769530-l_3-k_rapport-foi-vt20.pdf
+
+
 
 
 
