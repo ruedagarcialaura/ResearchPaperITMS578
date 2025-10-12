@@ -30,11 +30,11 @@ Our methodology is a Qualitative Comparative Analysis based on Manually Curated 
 
 This table will serve as our primary dataset. Please add new findings here as they are discovered.
 
-| Case / Incident Name | Region | Link to Report/Article | Date Found | Found By |
+| Case / Incident Name | Region | Link to Report/Article | Date  | Found By |
 | :--- | :--- | :--- | :--- | :--- |
-| *Deepfake Voice Scam* | `US` | `[Link to Forbes article]` | `2025-10-10` | `Laura` |
-| *Adversarial ML Attack* | `EU` | `[Link to ENISA report]` | `2025-10-10` | `Laura` |
-| | **US** | | | **Laura** |
+| *The Attack on Colonial Pipeline* | `US` | `https://insurica.com/blog/colonial-pipeline-ransomware-attack/` | `2021` | `Laura` |
+| *Son's voice was spoofed by artificial intelligence.* | `EU` | `https://www.c-span.org/video/?c5093651/story-attempted-scam-ai` | `2025-05` | `Laura` |
+|*Fraudsters impersonated WPP’s CEO using a fake WhatsApp account, a voice clone and YouTube footage used in a virtual meet*| `US` |`https://www.theguardian.com/technology/article/2024/may/10/ceo-wpp-deepfake-scam` | | `Laura` |
 | | **US** | | | **Laura** |
 | *TaskRabbit* | `US` | `https://www.infoq.com/articles/ai-cyber-attacks/` | `2018-04` | `Felipe` |
 | *Unnamed UK Energy Firm* | `EU` | `https://news.sophos.com/en-us/2019/09/05/scammers-deepfake-ceos-voice-to-talk-underling-into-243000-transfer/#:~:text=Well%2C%20welcome%20to%20a%20hybrid,USD%20%24243%2C000` | `2019-03` | `Felipe` |
@@ -44,6 +44,11 @@ This table will serve as our primary dataset. Please add new findings here as th
 
 ## OTHER IMPORTANT LINKS
 https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/ai-powered-cyberattacks/
+
+https://www.cyberdefensemagazine.com/the-growing-threat-of-ai-powered-cyberattacks-in-2025/
+
+https://mitsloan.mit.edu/ideas-made-to-matter/80-ransomware-attacks-now-use-artificial-intelligence#:~:text=New%20research%20from%20Cybersecurity%20at,as%20fake%20customer%20service%20calls
+
 
 
 
