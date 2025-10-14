@@ -1,4 +1,4 @@
-# Comparative Study of International Cybersecurity and AI Policies
+# Policy vs. Practice: A Comparative Analysis of EU and US Responses to AI-Driven Cyber Incidents
 
 ## 1. Project Overview
 
