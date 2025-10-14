@@ -42,8 +42,8 @@ Our methodology is a Qualitative Comparative Analysis based on Manually Compiled
 
 | Case / Incident Name | Region | Link to Report/Article | Date  | Found By |
 | :--- | :--- | :--- | :--- | :--- |
-| *Son's voice was spoofed by artificial intelligence.* | `EU` | `https://www.c-span.org/video/?c5093651/story-attempted-scam-ai` | `2025-05` | `Laura` |
-|*Fraudsters impersonated WPP’s CEO using a fake WhatsApp account, a voice clone and YouTube footage used in a virtual meet*| `EU` |`https://www.theguardian.com/technology/article/2024/may/10/ceo-wpp-deepfake-scam` | 2024-04 | `Felipe and Laura` |
+| *Son's voice was spoofed by artificial intelligence.* | `US` | `https://www.c-span.org/video/?c5093651/story-attempted-scam-ai` | `2025-05` | `Laura` |
+|*Fraudsters impersonated WPP’s CEO using a fake WhatsApp account, a voice clone and YouTube footage used in a virtual meet*| `EU` |`https://www.theguardian.com/technology/article/2024/may/10/ceo-wpp-deepfake-scam` | `2024-04` | `Felipe and Laura` |
 | *TaskRabbit* | `US` | `https://www.infoq.com/articles/ai-cyber-attacks/` | `2018-04` | `Felipe` |
 | *Unnamed UK Energy Firm* | `EU` | `https://news.sophos.com/en-us/2019/09/05/scammers-deepfake-ceos-voice-to-talk-underling-into-243000-transfer/#:~:text=Well%2C%20welcome%20to%20a%20hybrid,USD%20%24243%2C000` | `2019-03` | `Felipe` |
 
