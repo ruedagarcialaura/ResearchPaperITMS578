@@ -1,6 +1,13 @@
 # Policy vs. Practice: A Comparative Analysis of EU and US Responses to AI-Driven Cyber Incidents
+## 1. Important Links
 
-## 1. Project Overview
+* Link to video explanation:
+[Link to Loom video](https://www.loom.com/share/d73202440b6b4fba904bc76705da0fa2?sid=16525972-f208-4f4f-b03a-59ee455d7d3c)
+
+* Link to overleaf project: [Link to Overleaf Project](https://es.overleaf.com/read/rzfdtbggwxqk#ab99de)
+
+
+## 2. Project Overview
 
 This research project aims to conduct a qualitative comparative study of the cybersecurity and AI governance frameworks of the European Union (EU) and the United States (US). Our central hypothesis is that the EU’s stricter, unified regulations lead to a more effective response to AI-driven cyber incidents compared to the fragmented US framework.
 
@@ -10,12 +17,9 @@ To test this, we will manually identify, document, and analyze real-world case s
 * Laura Rueda García
 * Felipe Susaeta Miguel
 
-**LINK TO VIDEO EXPLANATION**
-
-
 ---
 
-## 2. Research Strategy & Methodology
+## 3. Research Strategy & Methodology
 
 Our methodology is a Qualitative Comparative Analysis based on Manually Compiled Case Studies.
 
@@ -36,11 +40,11 @@ Our methodology is a Qualitative Comparative Analysis based on Manually Compiled
         * Were any fines, sanctions, or official recommendations issued as a result?
 
 
-4. **Comparative Framework:** We will directly compare the nature of the "Regulatory & Governmental Response" (Point 2.C) between the US and EU cases to test our central hypothesis. We will also address the overall scarcity of publicly documented cases as a key finding of our research.
+4. **Comparative Framework:** We will directly compare the nature of the "Regulatory & Governmental Response" (Point 3.C) between the US and EU cases to test our central hypothesis. We will also address the overall scarcity of publicly documented cases as a key finding of our research.
 
 ---
 
-## 3. List of AI-Driven Incidents Found
+## 5. List of AI-Driven Incidents Found
 
 | Case / Incident Name | Region | Link to Report/Article | Date  | Found By |
 | :--- | :--- | :--- | :--- | :--- |
