@@ -10,15 +10,17 @@ To test this, we will manually identify, document, and analyze real-world case s
 * Laura Rueda García
 * Felipe Susaeta Miguel
 
+**LINK TO VIDEO EXPLANATION**
+
+
 ---
 
 ## 2. Research Strategy & Methodology
 
 Our methodology is a Qualitative Comparative Analysis based on Manually Compiled Case Studies.
 
-1. **Manual Curation:** Each team member is responsible for finding and documenting real-world examples of AI-driven cybersecurity incidents.
-
-2. **Case Study Analysis:** For each confirmed incident, we will analyze the attack vector, the corporate and regulatory response, and the overall outcome:
+1. **Manual Curation:** Finding and documenting real-world examples of AI-driven cybersecurity incidents.
+2. **Case Study Analysis:** For each incident: analyze the attack vector, the corporate and regulatory response, and the overall outcome:
     * **A. Incident Breakdown:**
         * What was the specific attack vector?
         * What AI technology was demonstrably used (e.g., voice cloning, video deepfake, generative AI for phishing)?
@@ -28,17 +30,17 @@ Our methodology is a Qualitative Comparative Analysis based on Manually Compiled
         * What was the immediate financial and operational impact?
         * How did the company publicly disclose the incident (if at all)?
     * **C. Regulatory & Governmental Response:**
-        * Was a law enforcement agency involved (e.g., FBI, Europol)?
-        * Was a cybersecurity agency involved (e.g., CISA, ENISA)?
-        * Were any specific regulations triggered (e.g., GDPR data breach notification, state-level laws)?
+        * Was a law enforcement agency involved (FBI, Europol...)?
+        * Was a cybersecurity agency involved (CISA, ENISA...)?
+        * Were any specific regulations triggered (GDPR data breach notification, state-level laws...)?
         * Were any fines, sanctions, or official recommendations issued as a result?
 
 
-4. **Comparative Framework:** We will directly compare the nature of the "Regulatory & Governmental Response" (Point 3.C) between the US and EU cases to test our central hypothesis. We will also address the overall scarcity of publicly documented cases as a key finding of our research.
+4. **Comparative Framework:** We will directly compare the nature of the "Regulatory & Governmental Response" (Point 2.C) between the US and EU cases to test our central hypothesis. We will also address the overall scarcity of publicly documented cases as a key finding of our research.
 
 ---
 
-## 3. List of AI-Driven Incidents
+## 3. List of AI-Driven Incidents Found
 
 | Case / Incident Name | Region | Link to Report/Article | Date  | Found By |
 | :--- | :--- | :--- | :--- | :--- |
