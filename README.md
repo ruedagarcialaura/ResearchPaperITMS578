@@ -48,14 +48,14 @@ Our methodology is a Qualitative Comparative Analysis based on Manually Compiled
 | *Unnamed UK Energy Firm* | `EU` | `https://news.sophos.com/en-us/2019/09/05/scammers-deepfake-ceos-voice-to-talk-underling-into-243000-transfer/#:~:text=Well%2C%20welcome%20to%20a%20hybrid,USD%20%24243%2C000` | `2019-03` | `Felipe` |
 
 ## OTHER IMPORTANT LINKS
-- AI-Powered Cyberattacks: https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/ai-powered-cyberattacks/
+- AI-Powered Cyberattacks: https://www.crowdstrike.com/en-us/cybersecurity-101/cyberattacks/ai-powered-cyberattacks/ USADO
 
-- The Growing Threat of AI-powered Cyberattacks in 2025: https://www.cyberdefensemagazine.com/the-growing-threat-of-ai-powered-cyberattacks-in-2025/
+- The Growing Threat of AI-powered Cyberattacks in 2025: https://www.cyberdefensemagazine.com/the-growing-threat-of-ai-powered-cyberattacks-in-2025/ USADO
 
-- 80% of ransomware attacks now use artificial intelligence: https://mitsloan.mit.edu/ideas-made-to-matter/80-ransomware-attacks-now-use-artificial-intelligence#:~:text=New%20research%20from%20Cybersecurity%20at,as%20fake%20customer%20service%20calls
+- 80% of ransomware attacks now use artificial intelligence: https://mitsloan.mit.edu/ideas-made-to-matter/80-ransomware-attacks-now-use-artificial-intelligence#:~:text=New%20research%20from%20Cybersecurity%20at,as%20fake%20customer%20service%20calls USADO
 
 - Governor Shapiro Signs New Digital Forgery Law, Protecting Pennsylvanians from AI Scams and Financial Exploitation: https://www.pa.gov/agencies/dobs/newsroom/governor-shapiro-signs-new-digital-forgery-law--protecting-penns
 
-- Artificial Intelligence Cyberattacks PAPER: https://www.uu.se/download/18.60263fe818f775e7806322da/1716301506021/c_769530-l_3-k_rapport-foi-vt20.pdf
+- Artificial Intelligence Cyberattacks PAPER: https://www.uu.se/download/18.60263fe818f775e7806322da/1716301506021/c_769530-l_3-k_rapport-foi-vt20.pdf USADO
 
 
