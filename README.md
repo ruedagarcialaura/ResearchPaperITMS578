@@ -14,7 +14,7 @@ This research project aims to conduct a qualitative comparative study of the cyb
 To test this, we will manually identify, document, and analyze real-world case studies of AI-driven cybersecurity incidents reported in both regions.
 
 **Team Members:**
-* Laura Rueda García
+* Laura Rueda Garcia
 * Felipe Susaeta Miguel
 
 ---
