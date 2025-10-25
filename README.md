@@ -6,6 +6,8 @@
 
 * Link to overleaf project: [Link to Overleaf Project](https://es.overleaf.com/read/rzfdtbggwxqk#ab99de)
 
+* Link to analysis of findings: [Link to Excel](https://iit0-my.sharepoint.com/:x:/g/personal/fsusaetamiguel_hawk_illinoistech_edu/EU6nm3TocNlGqgAnN2X8hMkB9lploc-BvVdjERQA5Hgm2A?e=jQHc2Z)
+
 
 ## 2. Project Overview
 
