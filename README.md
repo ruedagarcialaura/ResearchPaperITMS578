@@ -82,4 +82,6 @@ Our methodology is a Qualitative Comparative Analysis based on Manually Compiled
 
 - https://www.perallis.com/blog/bandits-steal-243-000-with-deepfake-audio-mimicking-ceo-voice : Many companies do not advertise they have been scammed, but the info would be helpful to create more regulations: "the German firm is not alone: researchers from the technology company Symantec told the Washington Post that they had found at least three other cases in which the voice of executives was imitated to deceive companies, resulting in losses of millions of dollars."
 
+### * Rest of analysis done on excel sheet!
+
 
