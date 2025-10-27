@@ -66,4 +66,18 @@ Our methodology is a Qualitative Comparative Analysis based on Manually Compiled
 
 - Artificial Intelligence Cyberattacks PAPER: https://www.uu.se/download/18.60263fe818f775e7806322da/1716301506021/c_769530-l_3-k_rapport-foi-vt20.pdf USADO
 
+## LINKS FOR ANALYSIS ON THE 4 INCIDENTS:
+
+*1. Attempted scam cloning son's voice of Philadelphia attorney:*
+
+- Cybercrime magazine Attoney's son case: https://soundcloud.com/cybercrimemagazine/targeted-complex-ai-phone-scam-almost-lost-thousands-gary-schildhorn-cybercrime-victim : law enforcement: police declined cause he had not lost any money and FBI said they were aware of the scamm but they said there was nothing they couldn't do at the time (because the scammers were changing the money to criptocurrecies right after and they could not follow the trace of the money). Months later because the *Senate sub comedy aging and economic policys* (Key areas of focus include income security, health care (like Medicare), age discrimination in employment, and protection against scams. The committee also submits findings and recommendations to the Senate) approached him to testify. 
+
+
+
+- "Unfortunately, existing legislation falls short of protecting victims of this type of scam.": https://www.independent.co.uk/news/world/americas/ai-phone-scam-voice-call-b2459449.html . (IP expert Michael Teich wrote in an August column for IPWatchdog that laws designed to protect privacy may apply in some cases of voice-cloning scams, but they’re only actionable by the person whose voice was used, not the victim of the fraud. Meanwhile, existing copyright laws do not recognise ownership of a person’s voice.): *To address the growing number of voice cloning scams, the FTC (Federal Trade Commission) has announced an open call to action. Participants are asked to develop solutions that protect consumers from voice cloning harms, and the winners will receive a prize of $25,000.*
+
+*2. Scammers deepfake CEO’s voice to talk underling into $243,000 transfer* 
+
+- 
+
 
