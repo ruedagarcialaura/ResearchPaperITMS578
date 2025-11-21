@@ -1,162 +1,172 @@
-import requests
-from bs4 import BeautifulSoup
-import feedparser
-import pandas as pd
 import time
 import os
+import pandas as pd
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin
+import requests
+import PyPDF2
+from io import BytesIO
 
-from sqlalchemy import create_engine
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, ElementClickInterceptedException
 
-# --- 1. Web Scraping Function ---
-def scrape_breach_portal():
+# --- 1. Keyword Definitions (Unchanged) ---
+AI_KEYWORDS = [
+    'deepfake', 'adversarial attack', 'model poisoning', 
+    'data poisoning', 'machine learning', 'generative ai'
+]
+INCIDENT_KEYWORDS = [
+    'attack', 'breach', 'vulnerability', 'threat actor', 'malware', 
+    'exploit', 'incident', 'campaign', 'phishing'
+]
+
+# --- 2. Deep Analysis Function (for PDFs) ---
+def analyze_alert_pdf_content(alert_url, driver):
     """
-    Scrapes a hypothetical data breach notification portal.
-    You need to find real URLs for state attorney general websites.
+    Performs the SLOW, deep analysis on a single, promising candidate.
     """
-    # Example URL from California Attorney General's office
-    url = "https://oag.ca.gov/privacy/databreach/list"
-    incidents = []
-    
     try:
-        response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
-        response.raise_for_status() # Raise an exception for bad status codes
-        soup = BeautifulSoup(response.text, 'html.parser')
+        driver.get(alert_url)
+        WebDriverWait(driver, 15).until(EC.presence_of_element_located((By.CSS_SELECTOR, 'div.c-field--name-body')))
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
         
-        # NOTE: This part is highly specific to the website's HTML structure.
-        # You will need to inspect the HTML of your target sites to find the right tags.
-        breach_entries = soup.find_all('div', class_='breach-entry') # This is a placeholder class
-        
-        for entry in breach_entries:
-            date = entry.find('span', class_='date-class').text
-            company = entry.find('a', class_='company-class').text
-            incidents.append({'date': date, 'company': company, 'region': 'US', 'source': url})
+        pdf_link_tag = soup.select_one('a[href$=".pdf"]')
+        if not pdf_link_tag:
+            # If no PDF, analyze the body text as a fallback
+            print("      -> No PDF found, analyzing body text...")
+            content_element = soup.select_one('div.c-field--name-body')
+            if not content_element: return False
+            page_text = content_element.get_text().lower()
+        else:
+            pdf_url = urljoin(alert_url, pdf_link_tag['href'])
+            print(f"      -> Found PDF: {pdf_url.split('/')[-1]}")
+            headers = {'User-Agent': 'Mozilla/5.0'}
+            pdf_response = requests.get(pdf_url, headers=headers)
+            pdf_response.raise_for_status()
+            pdf_file = BytesIO(pdf_response.content)
+            pdf_reader = PyPDF2.PdfReader(pdf_file)
+            page_text = ""
+            for page in pdf_reader.pages:
+                page_text += page.extract_text() or ""
+            page_text = page_text.lower()
 
-    except requests.exceptions.RequestException as e:
-        print(f"Error scraping {url}: {e}")
+        found_ai_keys = [key for key in AI_KEYWORDS if key in page_text]
+        found_incident_keys = [key for key in INCIDENT_KEYWORDS if key in page_text]
+        is_relevant = bool(found_ai_keys) and bool(found_incident_keys)
         
-    print(f"Scraped {len(incidents)} incidents from {url}")
-    return incidents
+        if is_relevant:
+            print(f"      -> SUCCESS: AI Keys Found: {found_ai_keys}, Incident Keys Found: {found_incident_keys}")
+        
+        return is_relevant
+    except Exception as e:
+        print(f"      -> Error during deep analysis: {e}")
+        return False
 
-# --- 2. API Querying Function ---
-def query_nvd_api():
+# --- 3. Fast Triage Scraper (NEW LOGIC) ---
+def triage_cisa_alerts_list(driver, max_pages):
     """
-    Queries the NIST NVD API for vulnerabilities related to 'AI'.
-    This is an example of getting structured data.
+    Performs a FAST triage by scanning only the summaries on the list pages.
+    Returns a short list of promising candidates for deep analysis.
     """
-    # NVD API endpoint for CVEs
-    url = "https://services.nvd.nist.gov/rest/json/cves/2.0"
-    params = {'keywordSearch': 'artificial intelligence', 'resultsPerPage': 50}
-    incidents = []
-    
-    try:
-        response = requests.get(url, params=params)
-        response.raise_for_status()
-        data = response.json()
-        
-        for cve_item in data.get('vulnerabilities', []):
-            cve_id = cve_item['cve']['id']
-            published_date = cve_item['cve']['published']
-            description = cve_item['cve']['descriptions'][0]['value']
+    base_url = "https://www.cisa.gov/news-events/cybersecurity-advisories"
+    print(f"--- Phase 1: Fast Triage of CISA advisories (up to {max_pages} pages) ---")
+    driver.get(base_url)
+    promising_candidates = []
+    page_num = 1
+
+    while page_num <= max_pages:
+        print(f"  -> Scraping page {page_num} for summaries...")
+        try:
+            wait = WebDriverWait(driver, 20)
+            wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, 'div.c-view__row')))
+            soup = BeautifulSoup(driver.page_source, 'html.parser')
+            alert_rows = soup.select('div.c-view__row')
+            if not alert_rows: break
+
+            for row in alert_rows:
+                summary_tag = row.select_one('div.c-teaser__summary')
+                title_tag = row.select_one('h3.c-teaser__title a')
+                if summary_tag and title_tag:
+                    summary_text = summary_tag.get_text().lower()
+                    # --- FAST TRIAGE: Check if any keyword exists in the summary ---
+                    if any(key in summary_text for key in AI_KEYWORDS):
+                        title = title_tag.text.strip()
+                        link = urljoin(base_url, title_tag['href'])
+                        print(f"    -> PROMISING CANDIDATE FOUND: {title}")
+                        promising_candidates.append({'title': title, 'link': link})
+            try:
+                next_button = driver.find_element(By.CSS_SELECTOR, 'li.c-pager__item--next a')
+                parent_li = next_button.find_element(By.XPATH, '..')
+                if 'is-disabled' in parent_li.get_attribute('class'): break
+                driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
+                time.sleep(1)
+                driver.execute_script("arguments[0].click();", next_button)
+                page_num += 1
+                time.sleep(3)
+            except (NoSuchElementException, TimeoutException):
+                break
+        except Exception as e:
+            print(f"  -> An error occurred during pagination: {e}")
+            break
             
-            # Simple check to assign region based on description content
-            region = 'EU' if 'GDPR' in description else 'US' if 'CCPA' in description else 'Global'
-            
-            incidents.append({'date': published_date, 'company': cve_id, 'region': region, 'source': 'NVD API'})
-        
-    except requests.exceptions.RequestException as e:
-        print(f"Error querying NVD API: {e}")
-        
-    print(f"Queried {len(incidents)} incidents from NVD API")
-    return incidents
-    
-# --- 3. RSS Feed Parsing Function ---
-def parse_security_rss_feed():
-    """
-    Parses an RSS feed from a cybersecurity news website.
-    """
-    # Example RSS feed URL (The Hacker News)
-    url = "https://feeds.feedburner.com/TheHackersNews"
-    incidents = []
-    
-    feed = feedparser.parse(url)
-    
-    for entry in feed.entries:
-        title = entry.title
-        published_date = entry.published
-        link = entry.link
-        
-        # Simple logic to find keywords
-        if 'breach' in title.lower() or 'attack' in title.lower():
-            # A more advanced version would use NLP to determine region
-            region = 'EU' if 'europe' in title.lower() else 'US' if 'u.s.' in title.lower() else 'Unknown'
-            incidents.append({'date': published_date, 'company': title, 'region': region, 'source': 'The Hacker News RSS', 'link': link})
+    return promising_candidates
 
-    print(f"Parsed {len(incidents)} incidents from RSS feed")      
-    return incidents
-
-
-
-# --- Main Execution ---
+# --- 4. Main Execution (Updated with 2-Phase Logic) ---
 if __name__ == "__main__":
-    print("Starting data collection...")
+    print("--- Starting V18 Data Collection with Fast Triage ---")
+    MAX_PAGES_TO_SCRAPE = 3 # Limit for the fast triage phase
     
-    # Run all collection functions
-    scraped_incidents = scrape_breach_portal()
-    time.sleep(1) # Be respectful and pause between requests
-    api_incidents = query_nvd_api()
-    time.sleep(1)
-    rss_incidents = parse_security_rss_feed()
+    chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--log-level=3")
+    chrome_options.add_experimental_option('prefs', {'intl.accept_languages': 'en,en_US'})
+    chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36")
     
-    # Combine all results
-    all_incidents = scraped_incidents + api_incidents + rss_incidents
-    
-    # Convert to a pandas DataFrame for easy handling
-    df = pd.DataFrame(all_incidents)
-    
-    # Save to a CSV file
-    output_path = 'data/incidents_database.csv'
-    df.to_csv(output_path, index=False)
-
-    print(f"\nCollection complete. Found {len(df)} potential incidents.")
-    print(f"Data saved to {output_path}")
-
-    #SAVE TO EXCEL
-    path = 'data'
-    excel_path = os.path.join(path, 'incidents_database.xlsx')
-    print(f"Attempting to save data to {excel_path}...")
+    driver = None
+    confirmed_incidents = []
     try:
-        # engine='openpyxl' es necesario para archivos .xlsx
-        df.to_excel(excel_path, index=False, engine='openpyxl')
-        print("Data saved successfully as an Excel file!")
-    except PermissionError:
-        print(f"Permission denied: Unable to save to {excel_path}. Please close the file if it's open and try again.")
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=chrome_options)
+        
+        # --- PHASE 1: Get promising candidates quickly ---
+        candidates = triage_cisa_alerts_list(driver, MAX_PAGES_TO_SCRAPE)
+        
+        # --- PHASE 2: Perform deep analysis only on the best candidates ---
+        if candidates:
+            print(f"\n--- Phase 2: Performing Deep Analysis on {len(candidates)} promising candidates... ---")
+            for i, alert in enumerate(candidates):
+                print(f"  -> Deep Checking ({i+1}/{len(candidates)}): {alert['title']}")
+                if analyze_alert_pdf_content(alert['link'], driver):
+                    confirmed_incidents.append({
+                        'title': alert['title'], 'region': 'US',
+                        'source': 'CISA Advisory', 'link': alert['link']
+                    })
+                time.sleep(1)
+            
     except Exception as e:
-        print(f"An error occurred while saving to Excel: {e}")
+        print(f"A critical error occurred: {e}")
+    finally:
+        if driver:
+            driver.quit()
 
-    #SAVE AS JSON
-    json_path = os.path.join(path, 'incidents_database.json')
-    print(f"Attempting to save data to {json_path}...")
-    try:
-        df.to_json(json_path, index=False)
-        print("Data saved successfully as a JSON file!")
-    except PermissionError:
-        print(f"Permission denied: Unable to save to {json_path}. Please close the file if it's open and try again.")
-    except Exception as e:
-        print(f"An error occurred while saving to JSON: {e}")
-
-    #SAVE IN SQLITE
-    db_path = os.path.join(path, 'incidents_database.sqlite')
-    print(f"Attempting to save data to {db_path}...")
-    try:
-        # Crea una "conexión" a la base de datos en el archivo
-        engine = create_engine(f'sqlite:///{db_path}')
-        # Guarda el DataFrame en una tabla llamada 'incidents'
-        # if_exists='replace' borrará la tabla anterior cada vez que ejecutes el script
-        df.to_sql('incidents', engine, if_exists='replace', index=False)
-        print("Data saved successfully to SQLite database!")
-    except Exception as e: # Capturamos un error más genérico para bases de datos
-        print(f"\n--- ERROR ---")
-        print(f"Could not write to the database: {e}")
-        print("----------------")
-
+    if not confirmed_incidents:
+        print("\n--- Collection Complete: No CISA advisories were confirmed after deep analysis. ---")
+    else:
+        df = pd.DataFrame(confirmed_incidents)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        data_dir = os.path.join(script_dir, 'data')
+        os.makedirs(data_dir, exist_ok=True)
+        output_path = os.path.join(data_dir, 'ai_incidents_database_v18.xlsx')
+        print(f"\n--- Collection Complete: Found {len(df)} unique and confirmed relevant CISA advisories. ---")
+        try:
+            df.to_excel(output_path, index=False, engine='openpyxl')
+            print(f"Data saved to {output_path}")
+        except PermissionError:
+            print(f"ERROR: PERMISSION DENIED. Is the file open in Excel?")
 
