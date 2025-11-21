@@ -1,0 +1,34 @@
+date,company,region,source,link
+2019-10-22T22:15:10.120,CVE-2015-9501,Global,NVD API,
+2023-07-13T21:15:09.253,CVE-2023-37468,Global,NVD API,
+2023-10-31T16:15:09.777,CVE-2023-46248,Global,NVD API,
+2023-12-11T19:15:09.070,CVE-2023-49795,Global,NVD API,
+2023-12-11T21:15:07.460,CVE-2023-49796,Global,NVD API,
+2023-12-22T21:15:08.150,CVE-2023-50731,Global,NVD API,
+2024-09-05T17:15:12.380,CVE-2024-24759,Global,NVD API,
+2024-09-23T16:15:06.670,CVE-2024-47066,Global,NVD API,
+2024-09-25T01:15:44.157,CVE-2024-45599,Global,NVD API,
+2024-12-30T17:15:09.467,CVE-2024-52294,Global,NVD API,
+2025-03-10T19:15:39.970,CVE-2025-22603,Global,NVD API,
+2025-03-13T19:15:52.050,CVE-2025-27496,Global,NVD API,
+2025-04-14T23:15:21.713,CVE-2025-31490,Global,NVD API,
+2025-04-15T00:15:14.607,CVE-2025-31491,Global,NVD API,
+2025-04-15T00:15:14.740,CVE-2025-31494,Global,NVD API,
+2025-05-05T19:15:57.050,CVE-2025-46571,Global,NVD API,
+2025-05-05T19:15:57.197,CVE-2025-46719,Global,NVD API,
+2025-05-14T16:15:28.957,CVE-2025-47777,Global,NVD API,
+2025-07-30T15:15:35.210,CVE-2025-53944,Global,NVD API,
+2025-09-04T10:42:32.810,CVE-2025-58357,Global,NVD API,
+2025-09-09T21:15:38.957,CVE-2025-58768,Global,NVD API,
+2025-09-11T19:15:34.443,CVE-2025-59053,Global,NVD API,
+2025-09-18T15:15:38.557,CVE-2025-59417,Global,NVD API,
+2025-09-25T14:15:45.930,CVE-2025-59426,Global,NVD API,
+"Mon, 06 Oct 2025 17:07:00 +0530",Oracle Rushes Patch for CVE-2025-61882 After Cl0p Exploited It in Data Theft Attacks,Unknown,The Hacker News RSS,https://thehackernews.com/2025/10/oracle-rushes-patch-for-cve-2025-61882.html
+"Fri, 03 Oct 2025 16:00:00 +0530","New ""Cavalry Werewolf"" Attack Hits Russian Agencies with FoalShell and StallionRAT",Unknown,The Hacker News RSS,https://thehackernews.com/2025/10/new-cavalry-werewolf-attack-hits.html
+"Thu, 02 Oct 2025 17:00:00 +0530","ThreatsDay Bulletin: CarPlay Exploit, BYOVD Tactics, SQL C2 Attacks, iCloud Backdoor Demand & More",Unknown,The Hacker News RSS,https://thehackernews.com/2025/10/threatsday-bulletin-carplay-exploit.html
+"Wed, 01 Oct 2025 22:50:00 +0530",New WireTap Attack Extracts Intel SGX ECDSA Key via DDR4 Memory-Bus Interposer,Unknown,The Hacker News RSS,https://thehackernews.com/2025/10/new-wiretap-attack-extracts-intel-sgx.html
+"Wed, 01 Oct 2025 18:57:00 +0530",OneLogin Bug Let Attackers Use API Keys to Steal OIDC Secrets and Impersonate Apps,Unknown,The Hacker News RSS,https://thehackernews.com/2025/10/onelogin-bug-let-attackers-use-api-keys.html
+"Wed, 01 Oct 2025 16:37:00 +0530","2025 Cybersecurity Reality Check: Breaches Hidden, Attack Surfaces Growing, and AI Misperceptions Rising",Unknown,The Hacker News RSS,https://thehackernews.com/2025/10/2025-cybersecurity-reality-check.html
+"Wed, 01 Oct 2025 00:12:00 +0530",New $50 Battering RAM Attack Breaks Intel and AMD Cloud Security Protections,Unknown,The Hacker News RSS,https://thehackernews.com/2025/10/50-battering-ram-attack-breaks-intel.html
+"Sat, 27 Sep 2025 17:36:00 +0530",China-Linked PlugX and Bookworm Malware Attacks Target Asian Telecom and ASEAN Networks,Unknown,The Hacker News RSS,https://thehackernews.com/2025/09/china-linked-plugx-and-bookworm-malware.html
+"Fri, 26 Sep 2025 18:15:00 +0530",New COLDRIVER Malware Campaign Joins BO Team and Bearlyfy in Russia-Focused Cyberattacks,Unknown,The Hacker News RSS,https://thehackernews.com/2025/09/new-coldriver-malware-campaign-joins-bo.html
