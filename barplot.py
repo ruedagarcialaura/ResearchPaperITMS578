@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 cases = ['TaskRabbit\n(US)', 'C-SPAN\n(US)', 'WPP\n(EU)', 'UK Energy Firm\n(EU)']
 levels = [0, 1, 1, 0] # 0: No Intervention, 1: Reporting only
 
-# Colors to distinguish regions (Blue for US, Orange for EU)
-colors = ['#1f77b4', '#1f77b4', '#ff7f0e', '#ff7f0e']
+# Colors to distinguish regions (Blue for US, Green for EU)
+colors = ['#1f77b4', '#1f77b4', "#2D954C", '#2D954C']
 
 # Create the Plot 
 plt.figure(figsize=(10, 6)) 
@@ -15,18 +15,21 @@ bars = plt.bar(cases, levels, color=colors, edgecolor='black')
 plt.ylim(0, 4.5) 
 y_ticks = [0, 1, 2, 3, 4]
 y_labels = [
-    '0: No Intervention / Public inaction',
+    '0: No Intervention',
     '1: Reporting only',
     '2: Active Investigation',
-    '3: Fines/Sanctions Issued',
+    '3: Fines Issued',
     '4: Severe Action'
 ]
 plt.yticks(y_ticks, y_labels)
 
 
-plt.ylabel('Regulatory Intervention Level', fontsize=12)
+ax = plt.gca()
+ax.set_ylabel('Regulatory Intervention Level', fontsize=12, rotation=270, labelpad=15)
+ax.yaxis.set_label_position("right")
+
 plt.xlabel('Case Studies', fontsize=12)
-plt.title('Regulatory Intervention Level: Policy vs. Practice Gap', fontsize=14, fontweight='bold')
+plt.title('Regulatory Intervention Level: Policy vs. Practice Gap', fontsize=18, fontweight='bold')
 plt.grid(axis='y', linestyle='--', alpha=0.6)
 
 
@@ -37,7 +40,7 @@ for bar in bars:
              ha='center', va='bottom', fontweight='bold')
 
 # Add Expectation Line 
-plt.axhline(y=3, color='red', linestyle=':', alpha=0.5, label='Policy Expectation')
+plt.axhline(y=3, color='red', linestyle=':', linewidth=3, alpha=0.9, zorder=5, label='Policy Expectation')
 plt.legend(loc='upper right')
 
 # Final Layout Adjustments  
